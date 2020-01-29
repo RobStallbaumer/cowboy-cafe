@@ -4,8 +4,12 @@ using System.Collections.Generic;
 
 namespace CowboyCafe.Data
 {
-	public class TrialBurger
+	public class TrailBurger
 	{
+        /// <summary>
+        /// if the burger has a bun
+        /// </summary>
+        public bool Bun { get; set; } = true;
 
         private bool ketchup = true;
         /// <summary>
@@ -82,6 +86,8 @@ namespace CowboyCafe.Data
                 if (!mustard) instructions.Add("hold mustard");
                 if (!pickle) instructions.Add("hold pickle");
                 if (!cheese) instructions.Add("hold cheese");
+                if (!Bun) instructions.Add("hold bun");
+
 
                 return instructions;
             }

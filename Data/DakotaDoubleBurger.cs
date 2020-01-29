@@ -4,8 +4,13 @@ using System.Collections.Generic;
 
 namespace CowboyCafe.Data
 {
-	public class DakotaDouble
+	public class DakotaDoubleBurger
 	{
+        /// <summary>
+        /// if the burger has a bun
+        /// </summary>
+        public bool Bun { get; set; } = true;
+
         private bool tomato = true;
         /// <summary>
         /// If the Dakota Double has tomatoes
@@ -106,13 +111,14 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-                if (!tomato) instructions.Add("hold tomatos");
+                if (!tomato) instructions.Add("hold tomato");
                 if (!lettuce) instructions.Add("hold lettuce");
                 if (!mayo) instructions.Add("hold mayo");
                 if (!ketchup) instructions.Add("hold ketchup");
                 if (!mustard) instructions.Add("hold mustard");
                 if (!pickle) instructions.Add("hold pickle");
                 if (!cheese) instructions.Add("hold cheese");
+                if (!Bun) instructions.Add("hold bun");
 
                 return instructions;
             }

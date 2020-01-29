@@ -4,8 +4,13 @@ using System.Collections.Generic;
 
 namespace CowboyCafe.Data
 {
-	public class TexasTriple
+	public class TexasTripleBurger
 	{
+        /// <summary>
+        /// if the burger has a bun
+        /// </summary>
+        public bool Bun { get; set; } = true;
+
         private bool bacon = true;
         /// <summary>
         /// If the Texas Triple has bacon
@@ -66,6 +71,36 @@ namespace CowboyCafe.Data
             set { cheese = value; }
         }
 
+        private bool mayo = true;
+        /// <summary>
+        /// If the Dakota Double has mayo
+        /// </summary>
+        public bool Mayo
+        {
+            get { return mayo; }
+            set { mayo = value; }
+        }
+
+        private bool tomato = true;
+        /// <summary>
+        /// If the Dakota Double has tomatoes
+        /// </summary>
+        public bool Tomato
+        {
+            get { return tomato; }
+            set { tomato = value; }
+        }
+
+        private bool lettuce = true;
+        /// <summary>
+        /// If the Dakota Double has lettuce
+        /// </summary>
+        public bool Lettuce
+        {
+            get { return lettuce; }
+            set { lettuce = value; }
+        }
+
         /// <summary>
         /// The price of the Texas Triple
         /// </summary>
@@ -97,12 +132,16 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
+                if (!tomato) instructions.Add("hold tomato");
+                if (!lettuce) instructions.Add("hold lettuce");
                 if (!bacon) instructions.Add("hold bacon");
                 if (!egg) instructions.Add("hold egg");
                 if (!ketchup) instructions.Add("hold ketchup");
                 if (!mustard) instructions.Add("hold mustard");
                 if (!pickle) instructions.Add("hold pickle");
                 if (!cheese) instructions.Add("hold cheese");
+                if (!mayo) instructions.Add("hold mayo");
+                if (!Bun) instructions.Add("hold bun");
 
                 return instructions;
             }
