@@ -4,16 +4,15 @@ using System.Collections.Generic;
 
 namespace CowboyCafe.Data
 {
+    /// <sumary>
+    /// A class representing an angry chicken entree
+    /// </summary>
 	public class AngryChicken
 	{
 
-
-
-
-
         private bool bread = true;
         /// <summary>
-        /// If the pulled pork has bread
+        /// If the Angry Chicken has bread
         /// </summary>
         public bool Bread
         {
@@ -23,7 +22,7 @@ namespace CowboyCafe.Data
 
         private bool pickle = true;
         /// <summary>
-        /// if the pulled pork has pickles
+        /// If the Angry Chicken has pickles
         /// </summary>
         public bool Pickle
         {
@@ -31,7 +30,7 @@ namespace CowboyCafe.Data
             set { pickle = value; }
         }
         /// <summary>
-        /// price of the chicken
+        /// Price of the Angry Chicken
         /// </summary>
         public double Price
         {
@@ -42,7 +41,7 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
-        /// calorie count of the chicken
+        /// Calorie count of the Angry Chicken
         /// </summary>
         public uint Calories
         {
@@ -53,7 +52,7 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
-        /// special instructions for the preperation of chicken
+        /// Special instructions for the preperation of Angry Chicken
         /// </summary>
         public List<string> SpecialInstructions
         {
