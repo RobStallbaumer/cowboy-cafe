@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace CowboyCafe.Data
 {
-	public class PecosPulledPork
+	public class PecosPulledPork : Entree
 	{
 
         private bool bread = true;
@@ -30,7 +30,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// price of the pulled pork
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -41,7 +41,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// calorie count of the pulled pork
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -52,7 +52,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// special instructions for the preperation of pulled pork
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

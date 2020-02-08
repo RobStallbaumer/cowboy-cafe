@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace CowboyCafe.Data
 {
-	public class DakotaDoubleBurger
+	public class DakotaDoubleBurger : Entree
 	{
         /// <summary>
         /// if the burger has a bun
@@ -83,7 +83,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The price of the Dakota Double
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -94,7 +94,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The Calories of the Dakota Double
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -105,7 +105,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Special instructions for the Dakota Double
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

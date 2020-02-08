@@ -4,12 +4,12 @@ using System.Collections.Generic;
 
 namespace CowboyCafe.Data
 {
-	public class RustlersRibs
+	public class RustlersRibs : Entree
 	{
         /// <summary>
         /// price of the Ribs
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -20,7 +20,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Calorie count of the Ribs
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -31,7 +31,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Special instructions for the preperation of Ribs
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
