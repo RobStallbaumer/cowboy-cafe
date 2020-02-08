@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Author: Rob Stallbaumer
+ * 
+ * PecosPulledPork.cs
+ * 
+ * Stores the data for the  Pecos Pulled Pork
+ * 
+ */
+using System;
 using System.Collections.Generic;
 
 

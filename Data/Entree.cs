@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Author: Rob Stallbaumer
+ * 
+ * Entree.cs
+ * 
+ * Base Class for the Entrees
+ * 
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

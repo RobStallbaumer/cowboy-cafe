@@ -1,4 +1,13 @@
-﻿using System;
+﻿/* 
+ * Edited by: Rob Stallbaumer
+ * 
+ * CornDodgers.cs
+ * 
+ * Stores data for the Corn Dodgers
+ * 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +15,9 @@ namespace CowboyCafe.Data
 {
     public class CornDodgers : Side
     {
+        /// <summary>
+        /// gets the calories based on size
+        /// </summary>
         public override uint Calories
         {
             get
@@ -24,6 +36,9 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// gets the price based on size
+        /// </summary>
         public override double Price
         {
             get

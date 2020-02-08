@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ * Author: Rob Stallbaumer
+ * 
+ * TrailBurger.cs
+ * 
+ * Stores the data for the trail burger
+ * 
+ */
+
+using System;
 using System.Collections.Generic;
 
 

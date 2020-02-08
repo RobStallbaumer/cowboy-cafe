@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ * Author: Rob Stallbaumer
+ * 
+ * DakotaDoubleBurger.cs
+ * 
+ * Stores the data for the  Dakota Double Burger
+
+ * 
+ */
+using System;
 using System.Collections.Generic;
 
 

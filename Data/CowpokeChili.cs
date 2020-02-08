@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+ * Author: Nathen Bean
+ * 
+ * Edited by: Rob Stallbaumer
+ * 
+ * CowpokeChili.cs
+ * 
+ * Stores data for the Cowpoke Chili
+ * 
+ */
+using System;
 using System.Collections.Generic;
 
 namespace CowboyCafe.Data

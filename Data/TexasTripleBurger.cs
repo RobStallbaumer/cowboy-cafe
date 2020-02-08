@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Author: Rob Stallbaumer
+ * 
+ * TexasTripleBurger.cs
+ * 
+ * Stores the data for the Texas Triple Burger
+ * 
+ */
+using System;
 using System.Collections.Generic;
 
 

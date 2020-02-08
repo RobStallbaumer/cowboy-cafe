@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ * Author: Rob Stallbaumer
+ * 
+ * RustlersRibs.cs
+ * 
+ * Stores the data for the Rustlers Ribs
+ * 
+ */
+
+using System;
 using System.Collections.Generic;
 
 

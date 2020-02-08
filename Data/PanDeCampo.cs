@@ -1,9 +1,21 @@
-﻿using System;
+﻿/*
+ * Author: Rob Stallbaumer
+ * 
+ * PanDeCampo.cs
+ * 
+ * Stores data for the Pan De Campo
+ * 
+ */
+
+using System;
 
 namespace CowboyCafe.Data
 {
 	public class PanDeCampo : Side
 	{
+        /// <summary>
+        /// gets the calories based on size
+        /// </summary>
         public override uint Calories
         {
             get
@@ -21,7 +33,9 @@ namespace CowboyCafe.Data
                 }
             }
         }
-
+        /// <summary>
+        /// gets the price based on size
+        /// </summary>
         public override double Price
         {
             get

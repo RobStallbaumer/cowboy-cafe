@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Author: Rob Stallbaumer
+ * 
+ * Side.cs
+ * 
+ * Base class for the sides
+ * 
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

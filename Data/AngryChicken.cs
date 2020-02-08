@@ -1,4 +1,12 @@
-﻿using System;
+﻿/* 
+ * Edited by: Rob Stallbaumer
+ * 
+ * AngryChicken.cs
+ * 
+ * Stores data for the Angry Chicken
+ * 
+ */
+using System;
 using System.Collections.Generic;
 
 
