@@ -24,6 +24,9 @@ namespace CowboyCafe.Data
         /// </summary>
         public abstract uint Calories { get; }
 
+        /// <summary>
+        /// Gets any special instructions for the preperation of an Entree
+        /// </summary>
         public abstract List<string> SpecialInstructions { get; }
     }
 }
