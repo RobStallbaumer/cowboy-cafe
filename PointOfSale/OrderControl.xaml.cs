@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CowboyCafe.Data;
 
 namespace PointOfSale
 {
@@ -20,105 +21,89 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderControl : UserControl
     {
-        public List<string> OrderList;
         public OrderControl()
         {
             InitializeComponent();
-            OrderList = new List<string>();
         }
 
         private void AddAngryChickenButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Add("Angry Chicken");
+            OrderList.Items.Add(new AngryChicken());
         }
 
         private void AddCowpokeChiliButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Add("Cowpoke Chili");
+            OrderList.Items.Add(new CowPokeChili());
 
         }
 
         private void AddDakotaDoubleBurgerButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Add("Dakota Double Burger");
+            OrderList.Items.Add(new DakotaDoubleBurger());
 
         }
 
         private void AddPecosPulledPorkButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Add("Pecos Pulled Pork");
+            OrderList.Items.Add(new PecosPulledPork());
 
         }
 
         private void AddRustlersRibsButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Add("Rustlers Ribs");
+            OrderList.Items.Add(new RustlersRibs());
 
         }
 
         private void AddTexasTripleBurgerButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Add("Texas Triple Burger");
+            OrderList.Items.Add(new TexasTripleBurger());
 
         }
 
         private void AddTrailBurgerButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Add("Trail Burger");
-
+            OrderList.Items.Add(new TrailBurger());
         }
 
         private void AddBakedBeansButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Add("Baked Beans");
-
+            OrderList.Items.Add(new BakedBeans());
         }
 
         private void AddChiliCheeseFriesButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Add("Chili Cheese Fries");
-
+            OrderList.Items.Add(new ChiliCheeseFries());
         }
 
         private void AddCornDodgersButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Add("Corn Dodgers");
-
+            OrderList.Items.Add(new CornDodgers());
         }
 
         private void AddPanDeCampoButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Add("Pan De Campo");
-
+            OrderList.Items.Add("Texas Triple Burger");
         }
 
         private void AddCowboyCoffeeButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Add("Cowboy Coffee");
-
+            OrderList.Items.Add("Texas Triple Burger");
         }
 
         private void AddJerkedSodaButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Add("Jerked Soda");
-
+            OrderList.Items.Add("Texas Triple Burger");
         }
 
         private void AddTexasTeaButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Add("Texas Tea");
-
+            OrderList.Items.Add("Texas Triple Burger");
         }
 
         private void AddWaterButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Add("Water");
-
-        }
-
-        private void OrderListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
+            OrderList.Items.Add("Texas Triple Burger");
         }
     }
 }

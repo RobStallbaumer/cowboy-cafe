@@ -12,14 +12,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{B66D0C42-0298-4199-AFB0-31A707A372E2}"
-	ProjectSection(SolutionItems) = preProject
-		UML for milestone 3 (1).png = UML for milestone 3 (1).png
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointOfSale", "PointOfSale\PointOfSale.csproj", "{F7D6E807-80E1-4971-BA0D-53382FFA84C1}"
 	ProjectSection(ProjectDependencies) = postProject
 		{C3BFDB18-4ACD-495B-9CCE-675B7A8FD8FE} = {C3BFDB18-4ACD-495B-9CCE-675B7A8FD8FE}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{63FA3038-6DFF-42B0-974C-E80973A491A8}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\UML for milestone 3 (1).png = ..\..\..\Downloads\UML for milestone 3 (1).png
 	EndProjectSection
 EndProject
 Global
@@ -43,9 +43,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{B66D0C42-0298-4199-AFB0-31A707A372E2} = {938FDA09-9346-4837-A3AE-EA1B3485B73F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF0ECCFA-B4C0-4862-B136-C797D24E1A41}

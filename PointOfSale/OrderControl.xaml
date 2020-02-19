@@ -54,7 +54,7 @@
 
         <StackPanel Grid.Column="3" Margin="2" Background="LightGray">
             <TextBlock TextAlignment="Center" FontSize="20">Order</TextBlock>
-            <ListBox Name="OrderListBox" Height="470" SelectionChanged="OrderListBox_SelectionChanged"/>
+            <ListBox Name="OrderList"/>
 
         </StackPanel>
     </Grid>
