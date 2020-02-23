@@ -17,7 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		..\..\..\Downloads\UML for milestone 3 (1).png = ..\..\..\Downloads\UML for milestone 3 (1).png
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderControl", "OrderControl\OrderControl.csproj", "{89B427E1-70C7-451C-95A4-473C162D0653}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointOfSale", "OrderControl\PointOfSale.csproj", "{89B427E1-70C7-451C-95A4-473C162D0653}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C3BFDB18-4ACD-495B-9CCE-675B7A8FD8FE} = {C3BFDB18-4ACD-495B-9CCE-675B7A8FD8FE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

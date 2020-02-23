@@ -49,5 +49,13 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+        /// <summary>
+        /// overrides the string that this class returns when called
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return "Rustlers Ribs";
+        }
     }
 }
