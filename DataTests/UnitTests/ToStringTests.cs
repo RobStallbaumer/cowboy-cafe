@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 using CowboyCafe.Data;
-
+/*
 namespace CowboyCafe.DataTests
 {
     public class ToStringTests
@@ -21,6 +21,7 @@ namespace CowboyCafe.DataTests
             Entree entree = Activator.CreateInstance(type) as Entree;
             Assert.Equal(expected, entree.ToString());
         }
+
         [Theory]
         [InlineData(typeof(ChiliCheeseFries), Size.Small, "Small Chili Cheese Fries")]
         [InlineData(typeof(ChiliCheeseFries), Size.Medium, "Medium Chili Cheese Fries")]
@@ -40,6 +41,7 @@ namespace CowboyCafe.DataTests
             side.Size = size;
             Assert.Equal(expected, side.ToString());
         }
+
         [Theory]
         [InlineData(Size.Small, "Small Water")]
         [InlineData(Size.Medium, "Medium Water")]
@@ -52,6 +54,7 @@ namespace CowboyCafe.DataTests
             };
             Assert.Equal(expected, water.ToString());
         }
+
         [Theory]
         [InlineData(SodaFlavor.BirchBeer, Size.Small, "Small Birch Beer Jerked Soda")]
         [InlineData(SodaFlavor.BirchBeer, Size.Medium, "Medium Birch Beer Jerked Soda")]
@@ -77,6 +80,7 @@ namespace CowboyCafe.DataTests
             };
             Assert.Equal(expected, soda.ToString());
         }
+
         [Theory]
         [InlineData(Size.Small, false, "Small Texas Plain Tea")]
         [InlineData(Size.Medium, false, "Medium Texas Plain Tea")]
@@ -93,6 +97,7 @@ namespace CowboyCafe.DataTests
             };
             Assert.Equal(expected, tea.ToString());
         }
+
         [Theory]
         [InlineData(Size.Small, false, "Small Cowboy Coffee")]
         [InlineData(Size.Medium, false, "Medium Cowboy Coffee")]
@@ -109,6 +114,7 @@ namespace CowboyCafe.DataTests
             };
             Assert.Equal(expected, coffee.ToString());
         }
+
     }
 }
-
+*/
