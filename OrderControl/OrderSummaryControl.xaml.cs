@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CowboyCafe.Data;
 
 namespace PointOfSale
 {
@@ -18,9 +19,16 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderSummaryControl : UserControl
     {
+        public List<IOrderItem> Items;
         public OrderSummaryControl()
         {
             InitializeComponent();
+            Items = new List<IOrderItem>();
         }
+        public void AddOrderItem(IOrderItem item)
+        {
+            Items.Add(item);
+        }
+       
     }
 }
