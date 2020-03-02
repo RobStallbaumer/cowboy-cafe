@@ -15,7 +15,7 @@
 
     <StackPanel>
         <TextBlock>Order</TextBlock>
-        <ListBox ItemsSource="{Binding Path=order}">
+        <ListBox ItemsSource="{Binding Path=Items}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>

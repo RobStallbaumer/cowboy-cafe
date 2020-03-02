@@ -23,15 +23,22 @@ namespace PointOfSale
         public MenuItemSelectionControl()
         {
             InitializeComponent();
+            
         }
         private void AddAngryChickenButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            if(DataContext is Order order)
+            {
+                order.Add(new AngryChicken());
+            }
         }
 
         private void AddCowpokeChiliButton_Click(object sender, RoutedEventArgs e)
         {
-           // orderSummaryControl.AddOrderItem(new CowpokeChili());
+            if (DataContext is Order order)
+            {
+                order.Add(new CowpokeChili());
+            }
         }
 
         private void AddDakotaDoubleBurgerButton_Click(object sender, RoutedEventArgs e)

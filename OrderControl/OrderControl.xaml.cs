@@ -19,11 +19,11 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderControl : UserControl
     {
-        
         public OrderControl()
         {
             InitializeComponent();
             var order = new Order();
+            this.DataContext = order;
         }
 
         private void ItemSelectionButton_Click(object sender, RoutedEventArgs e)

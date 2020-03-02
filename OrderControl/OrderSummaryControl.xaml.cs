@@ -19,15 +19,10 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderSummaryControl : UserControl
     {
-        public List<IOrderItem> Items;
         public OrderSummaryControl()
         {
             InitializeComponent();
-            Items = new List<IOrderItem>();
         }
-        public void AddOrderItem(IOrderItem item)
-        {
-            Items.Add(item);
-        }
+        
     }
 }
