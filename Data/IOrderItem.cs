@@ -8,7 +8,7 @@ namespace CowboyCafe.Data
     {
         double Price { get; }
 
-        List<string> SpecialInstructions { get; }
+        IEnumerable<string> SpecialInstructions { get; }
 
     }
 }

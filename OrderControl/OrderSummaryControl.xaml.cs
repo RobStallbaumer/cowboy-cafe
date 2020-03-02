@@ -29,6 +29,5 @@ namespace PointOfSale
         {
             Items.Add(item);
         }
-       
     }
 }

@@ -16,7 +16,7 @@
     
     <DockPanel>
         
-        <local:OrderSummaryControl DockPanel.Dock="Right"/>
+        <local:OrderSummaryControl DockPanel.Dock="Right" Width="200"/>
         
         <Grid DockPanel.Dock="Top">
             <Grid.ColumnDefinitions>
