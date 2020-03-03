@@ -4,35 +4,39 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PointOfSale"
-        mc:Ignorable="d">
+        mc:Ignorable="d"
+             d:DesignHeight="575" d:DesignWidth="1000">
     <UserControl.Resources>
         <Style TargetType="Button">
             <Setter Property="Height" Value="75"/>
-
             <Setter Property="Width" Value="200"/>
         </Style>
-
     </UserControl.Resources>
 
-    <Grid DockPanel.Dock="Top">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
             <Grid.RowDefinitions>
-                <RowDefinition/>
+                <RowDefinition Height="75"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button x:Name="ItemSelectionButton" Click="ItemSelectionButton_Click">Item Selection</Button>
-            <Button x:Name="CancelOrderButton" Click="CancelOrderButton_Click">Cancel Order</Button>
-            <Button x:Name="CompleteOrderButton" Click="CompleteOrderButton_Click">Complete Order</Button>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="ItemSelectionButton" Grid.Column="0" Click="ItemSelectionButton_Click">Item Selection</Button>
+                <Button x:Name="CancelOrderButton" Grid.Column="1" Click="CancelOrderButton_Click">Cancel Order</Button>
+                <Button x:Name="CompleteOrderButton" Grid.Column="2" Click="CompleteOrderButton_Click">Complete Order</Button>
+            </Grid>
             <local:MenuItemSelectionControl Grid.Row="1"/>
         </Grid>
-            
-            
-            <local:OrderSummaryControl Grid.Column="2" Width="200"/>
-        </Grid>
+        <local:OrderSummaryControl Grid.Column="2" Width="200"/>
+    </Grid>
         
     
 </UserControl>

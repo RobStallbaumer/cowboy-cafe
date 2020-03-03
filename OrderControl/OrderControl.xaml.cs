@@ -19,6 +19,9 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderControl : UserControl
     {
+        /// <summary>
+        /// Constuctor initilizes component and creates the datacontext for the ordercontrol
+        /// </summary>
         public OrderControl()
         {
             InitializeComponent();
@@ -26,16 +29,31 @@ namespace PointOfSale
             this.DataContext = order;
         }
 
+        /// <summary>
+        /// Does not need to be implemented yet
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ItemSelectionButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
+        /// <summary>
+        /// Cancels the order and starts a new order in place of it
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelOrderButton_Click(object sender, RoutedEventArgs e)
         {
             this.DataContext = new Order();
         }
 
+        /// <summary>
+        /// Compleates the order and starts a new one
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CompleteOrderButton_Click(object sender, RoutedEventArgs e)
         {
             this.DataContext = new Order();
