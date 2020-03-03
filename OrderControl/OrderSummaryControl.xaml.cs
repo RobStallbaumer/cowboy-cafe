@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Author: Rob Stallbaumer
+ * 
+ * OrderSummaryControl.xaml.cs
+ * 
+ * displays the list of items and their price
+ * 
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

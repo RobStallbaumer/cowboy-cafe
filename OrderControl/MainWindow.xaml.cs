@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ * Author: Rob Stallbaumer
+ * 
+ * MainWindow.xaml.cs
+ * 
+ * The window that all of the controls go into 
+
+ * 
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

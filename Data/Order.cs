@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Author: Rob Stallbaumer
+ * 
+ * Order.cs
+ * 
+ * The order base class
+ * 
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
@@ -16,7 +24,6 @@ namespace CowboyCafe.Data
         /// Keeps track of the previous order number
         /// </summary>
         private uint lastOrderNumber;
-
         /// <summary>
         /// gets the subtotal for the Order summary control
         /// </summary>

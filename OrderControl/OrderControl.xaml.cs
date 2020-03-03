@@ -1,4 +1,12 @@
-﻿using CowboyCafe.Data;
+﻿/*
+ * Author: Rob Stallbaumer
+ * 
+ * OrderControl.xaml.cs
+ * 
+ * combines the menu selection control and order summary control into one control along with 3 buttons
+ * 
+ */
+ using CowboyCafe.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;

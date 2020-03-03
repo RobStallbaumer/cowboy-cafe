@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
-             d:DesignHeight="675" d:DesignWidth="300">
+             d:DesignHeight="675" d:DesignWidth="350">
 
     <UserControl.Resources>
         <Style TargetType="ListBox">
@@ -19,8 +19,10 @@
             <RowDefinition/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" TextAlignment="Center" FontSize="20" Text="{Binding Path=OrderNumber}">Order</TextBlock>
-        <ListBox ItemsSource="{Binding Path=Items}" Grid.Row="1">
+        <TextBlock FontSize="20" TextAlignment="Center">Order
+            <TextBlock FontSize="20" Text="{Binding Path=OrderNumber}"/>
+        </TextBlock>
+        <ListBox ItemsSource="{Binding Path=Items}" Grid.Row="1" HorizontalAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -29,7 +31,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Text="{Binding}" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding Path=Items.Price, StringFormat=c}" Grid.Column="1"/>
+                        <TextBlock Text="{Binding Path=Price, StringFormat=c}" Grid.Column="1" TextAlignment="Right" FontWeight="Bold"/>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -40,7 +42,7 @@
                 <ColumnDefinition Width="50"/>
             </Grid.ColumnDefinitions>
             <TextBox>Price</TextBox>
-            <!--<TextBox Grid.Column="1" Text="{Binding Path=Subtotal}"></TextBox>  This is not working for some reason-->
+            <TextBox Grid.Column="1" Text="{Binding Path=Subtotal, Mode=OneWay, StringFormat=c}"></TextBox>  
         </Grid>
     </Grid>
 </UserControl>

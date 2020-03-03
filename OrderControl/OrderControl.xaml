@@ -16,8 +16,9 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="350"/>
         </Grid.ColumnDefinitions>
+        <local:OrderSummaryControl Width="350" Grid.Column="1"/>
         <Grid Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="75"/>
@@ -35,8 +36,8 @@
             </Grid>
             <local:MenuItemSelectionControl Grid.Row="1"/>
         </Grid>
-        <local:OrderSummaryControl Grid.Column="2" Width="200"/>
-    </Grid>
         
-    
+    </Grid>
+
+
 </UserControl>
