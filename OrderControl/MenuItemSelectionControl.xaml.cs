@@ -11,6 +11,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using PointOfSale.CustomizationScreens;
+using PointOfSale.ExtensionMethods;
 
 namespace PointOfSale
 {
@@ -19,7 +21,6 @@ namespace PointOfSale
     /// </summary>
     public partial class MenuItemSelectionControl : UserControl
     {
-        
         public MenuItemSelectionControl()
         {
             InitializeComponent();
@@ -32,9 +33,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddAngryChickenButton_Click(object sender, RoutedEventArgs e)
         {
-            if(DataContext is Order order)
+            
+            var orderControl = this.FindAncestor<OrderControl>();
+           // var screen = new CowpokeChiliCustomization();
+         //   screen.DataContext = new AngryChicken();
+            if (DataContext is Order order)
             {
                 order.Add(new AngryChicken());
+         //       orderControl?.SwapScreen(screen);
             }
         }
 
@@ -45,9 +51,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddCowpokeChiliButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
+            var screen = new CowpokeChiliCustomization();
+            var item = new CowpokeChili();
+            screen.DataContext = item;
             if (DataContext is Order order)
             {
-                order.Add(new CowpokeChili());
+                order.Add(item);
+                orderControl?.SwapScreen(screen);
             }
         }
 
@@ -58,6 +69,8 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddDakotaDoubleBurgerButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
+
             if (DataContext is Order order)
             {
                 order.Add(new DakotaDoubleBurger());
@@ -71,6 +84,8 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddPecosPulledPorkButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
+
             if (DataContext is Order order)
             {
                 order.Add(new PecosPulledPork());
@@ -84,6 +99,8 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddRustlersRibsButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
+
             if (DataContext is Order order)
             {
                 order.Add(new RustlersRibs());
@@ -97,6 +114,8 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddTexasTripleBurgerButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
+
             if (DataContext is Order order)
             {
                 order.Add(new TexasTripleBurger());
@@ -110,6 +129,8 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddBakedBeansButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
+
             if (DataContext is Order order)
             {
                 order.Add(new BakedBeans());
@@ -123,6 +144,8 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddChiliCheeseFriesButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
+
             if (DataContext is Order order)
             {
                 order.Add(new ChiliCheeseFries());
@@ -136,6 +159,8 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddCornDodgersButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
+
             if (DataContext is Order order)
             {
                 order.Add(new CornDodgers());
@@ -149,6 +174,8 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddPanDeCampoButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
+
             if (DataContext is Order order)
             {
                 order.Add(new PanDeCampo());
@@ -162,6 +189,8 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddCowboyCoffeeButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
+
             if (DataContext is Order order)
             {
                 order.Add(new CowboyCoffee());
@@ -175,6 +204,8 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddJerkedSodaButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
+
             if (DataContext is Order order)
             {
                 order.Add(new JerkedSoda());
@@ -188,6 +219,8 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddTexasTeaButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
+
             if (DataContext is Order order)
             {
                 order.Add(new TexasTea());
@@ -201,6 +234,8 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddWaterButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
+
             if (DataContext is Order order)
             {
                 order.Add(new Water());
@@ -214,6 +249,8 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddTrailBurgerButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
+
             if (DataContext is Order order)
             {
                 order.Add(new TrailBurger());

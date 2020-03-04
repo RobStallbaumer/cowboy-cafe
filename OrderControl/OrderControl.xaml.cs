@@ -19,7 +19,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
 namespace PointOfSale
 {
     /// <summary>
@@ -44,7 +43,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void ItemSelectionButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Container.Child = new MenuItemSelectionControl();
         }
 
         /// <summary>
@@ -65,6 +64,11 @@ namespace PointOfSale
         private void CompleteOrderButton_Click(object sender, RoutedEventArgs e)
         {
             this.DataContext = new Order();
+        }
+
+        public void SwapScreen(FrameworkElement elemnt)
+        {
+            Container.Child = elemnt;
         }
     }
 }
