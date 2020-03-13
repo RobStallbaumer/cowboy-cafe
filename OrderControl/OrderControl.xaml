@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PointOfSale"
         mc:Ignorable="d"
-             d:DesignHeight="575" d:DesignWidth="1000">
+             d:DesignHeight="632.122" d:DesignWidth="1000">
     <UserControl.Resources>
         <Style TargetType="Button">
             <Setter Property="Height" Value="75"/>

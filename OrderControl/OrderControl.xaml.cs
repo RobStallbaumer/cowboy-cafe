@@ -66,9 +66,9 @@ namespace PointOfSale
             this.DataContext = new Order();
         }
 
-        public void SwapScreen(FrameworkElement elemnt)
+        public void SwapScreen(FrameworkElement element)
         {
-            Container.Child = elemnt;
+            Container.Child = element;
         }
     }
 }

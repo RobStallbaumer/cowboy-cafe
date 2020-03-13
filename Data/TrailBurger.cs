@@ -9,17 +9,32 @@
 
 using System;
 using System.Collections.Generic;
-
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
-	public class TrailBurger : Entree
-	{
+	public class TrailBurger : Entree, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// The property changed event
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public bool bun = true;
         /// <summary>
         /// if the burger has a bun
         /// </summary>
-        public bool Bun { get; set; } = true;
-
+        public bool Bun
+        {
+            get { return bun; }
+            set
+            {
+                bun = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bun"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         private bool ketchup = true;
         /// <summary>
         /// If the Trail Burger has ketchup
@@ -27,7 +42,12 @@ namespace CowboyCafe.Data
         public bool Ketchup
         {
             get { return ketchup; }
-            set { ketchup = value; }
+            set 
+            {
+                ketchup = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ketchup"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
         }
 
         private bool mustard = true;
@@ -37,7 +57,12 @@ namespace CowboyCafe.Data
         public bool Mustard
         {
             get { return mustard; }
-            set { mustard = value; }
+            set 
+            {
+                mustard = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mustard"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
         }
 
         private bool pickle = true;
@@ -47,17 +72,28 @@ namespace CowboyCafe.Data
         public bool Pickle
         {
             get { return pickle; }
-            set { pickle = value; }
+            set 
+            { 
+                pickle = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pickle"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
         }
 
         private bool cheese = true;
+
         /// <summary>
         /// If the Trail Burger is topped with cheese
         /// </summary>
         public bool Cheese
         {
             get { return cheese; }
-            set { cheese = value; }
+            set 
+            {
+                cheese = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheese"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
         }
 
         /// <summary>
