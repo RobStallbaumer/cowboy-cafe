@@ -22,7 +22,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The property changed event
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
+        public virtual event PropertyChangedEventHandler PropertyChanged;
 
         private Size size = Size.Small;
         /// <summary>

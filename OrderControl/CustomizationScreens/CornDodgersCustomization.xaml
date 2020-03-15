@@ -7,6 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <StackPanel Orientation="Vertical">
+            <ComboBox ItemsSource="{Binding Path=Size}">
+                <ComboBoxItem IsSelected="{Binding Path=Size.Small}">Small</ComboBoxItem>
+                <ComboBoxItem IsSelected="{Binding Path=Size.Medium}">Medium</ComboBoxItem>
+                <ComboBoxItem IsSelected="{Binding Path=Size.Large}" >Large</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
     </Grid>
 </UserControl>

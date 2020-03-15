@@ -10,6 +10,8 @@
         <StackPanel Orientation="Vertical">
             <CheckBox IsChecked="{Binding Path=Ice}">Ice</CheckBox>
             <CheckBox IsChecked="{Binding Path=Lemon}">Lemon</CheckBox>
+            
+
         </StackPanel>
     </Grid>
 </UserControl>

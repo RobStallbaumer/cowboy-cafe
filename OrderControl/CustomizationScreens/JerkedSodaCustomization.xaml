@@ -6,7 +6,10 @@
              xmlns:local="clr-namespace:PointOfSale.CustomizationScreens"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
     <Grid>
-            
+        <StackPanel Orientation="Vertical">
+            <CheckBox IsChecked="{Binding Path=Ice}">Ice</CheckBox>
+        </StackPanel>
     </Grid>
 </UserControl>

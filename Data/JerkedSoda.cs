@@ -6,8 +6,12 @@ using System.ComponentModel;
 namespace CowboyCafe.Data
 {
     public class JerkedSoda : Drink, INotifyPropertyChanged
-    {      
-        
+    {
+        /// <summary>
+        /// The property changed event
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChangedd;
+
         public override double Price
         {
             get
@@ -44,7 +48,18 @@ namespace CowboyCafe.Data
             }
         }
 
-        public SodaFlavor Flavor { get; set; }
+        private SodaFlavor sodaFlavor = SodaFlavor.BirchBeer;
+        public SodaFlavor Flavor 
+        {
+            get { return sodaFlavor; }
+            set
+            {
+                sodaFlavor = value;
+                PropertyChangedd?.Invoke(this, new PropertyChangedEventArgs("SodaFlavor"));
+                PropertyChangedd?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            } 
+        
+        }
 
         public override List<string> SpecialInstructions
         {

@@ -23,7 +23,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The property changed event
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChangedd;
+        public override event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         /// Gets the price of the tea depending on the size
@@ -97,8 +97,8 @@ namespace CowboyCafe.Data
             set
             {
                 lemon = value;
-                PropertyChangedd?.Invoke(this, new PropertyChangedEventArgs("Lemon"));
-                PropertyChangedd?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Lemon"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
 
         }
@@ -108,15 +108,25 @@ namespace CowboyCafe.Data
         /// If the tea is sweet or not
         /// </summary>
         public bool Sweet 
-        { get { return sweet; }
+        { 
+            get { return sweet; }
             set {
                     sweet = value;
-                    PropertyChangedd?.Invoke(this, new PropertyChangedEventArgs("Sweet"));
-                    PropertyChangedd?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
-                
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sweet"));
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
         }
-
+        private bool ice = true;
+        public override bool Ice
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         /// <summary>
         /// Gets any special instructions for the preperation of the drink
         /// </summary>

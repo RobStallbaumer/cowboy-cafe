@@ -22,7 +22,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The property changed event
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
+        public override event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         /// Gets the price of the water it is always $.12
@@ -52,6 +52,18 @@ namespace CowboyCafe.Data
             }
         
         }
+
+        //private bool ice = true;
+        //public override bool Ice
+        //{
+        //    get { return ice; }
+        //    set
+        //    {
+        //        ice = value;
+        //        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+        //        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+        //    }
+        //}
 
         /// <summary>
         /// List of special instructions on the preperation of water
