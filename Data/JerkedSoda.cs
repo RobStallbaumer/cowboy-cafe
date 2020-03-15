@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
-    public class JerkedSoda : Drink
-    {
+    public class JerkedSoda : Drink, INotifyPropertyChanged
+    {      
+        
         public override double Price
         {
             get

@@ -10,14 +10,20 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// class for the drink Texas Tea
     /// </summary>
-    public class TexasTea : Drink
+    public class TexasTea : Drink, INotifyPropertyChanged
     {
+
+        /// <summary>
+        /// The property changed event
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChangedd;
 
         /// <summary>
         /// Gets the price of the tea depending on the size
@@ -79,14 +85,37 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
-        /// If there is lemon in the tea or not
+        /// backing variable for the lemon special instruction. 
         /// </summary>
-        public bool Lemon { get; set; } = false;
+        private bool lemon = false;
+        /// <summary>
+        /// If there is lemon or not
+        /// </summary>
+        public bool Lemon
+        {
+            get { return lemon; }
+            set
+            {
+                lemon = value;
+                PropertyChangedd?.Invoke(this, new PropertyChangedEventArgs("Lemon"));
+                PropertyChangedd?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
 
+        }
+
+        private bool sweet = true;
         /// <summary>
         /// If the tea is sweet or not
         /// </summary>
-        public bool Sweet { get; set; } = true;
+        public bool Sweet 
+        { get { return sweet; }
+            set {
+                    sweet = value;
+                    PropertyChangedd?.Invoke(this, new PropertyChangedEventArgs("Sweet"));
+                    PropertyChangedd?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                
+            }
+        }
 
         /// <summary>
         /// Gets any special instructions for the preperation of the drink

@@ -18,8 +18,6 @@
             <CheckBox IsChecked="{Binding Path=Cheese}">Cheese</CheckBox>
             <CheckBox IsChecked="{Binding Path=Bacon}">Bacon</CheckBox>
             <CheckBox IsChecked="{Binding Path=Egg}">Egg</CheckBox>
-
-
         </StackPanel>
     </Grid>
 </UserControl>
