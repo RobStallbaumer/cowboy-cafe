@@ -23,5 +23,15 @@ namespace PointOfSale.CustomizationScreens
         {
             InitializeComponent();
         }
+        private void AddItemButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void mySizeBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var size = mySizeBox.SelectedItem;
+            
+        }
     }
 }

@@ -4,15 +4,34 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale.CustomizationScreens"
+            xmlns:my="clr-namespace:CowboyCafe.Data;assembly=CowboyCafe.Data"           
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+
+    <Control.Resources>
+        <ObjectDataProvider MethodName="GetValues" ObjectType="{x:Type my:Size}" 
+                            x:Key="Data.Size">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="my:Size"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Control.Resources>
+    <Border>
+        <StackPanel>
+            <TextBlock>Choose Size of Side</TextBlock>
+            <ListBox x:Name="mySizeBox" SelectedIndex="0" ItemsSource="{Binding Source={StaticResource Data.Size}}" SelectionChanged="mySizeBox_SelectionChanged"/>
+            <Button x:Name="AddItemButton" Width="300" Height="75" Click="AddItemButton_Click">Add Item to Order</Button>
+        </StackPanel>
+    </Border>
+    <!--<Grid>
         <StackPanel Orientation="Vertical">
             <ComboBox ItemsSource="{Binding Path=Size}">
                 <ComboBoxItem IsSelected="{Binding Path=Size.Small}">Small</ComboBoxItem>
                 <ComboBoxItem IsSelected="{Binding Path=Size.Medium}">Medium</ComboBoxItem>
                 <ComboBoxItem IsSelected="{Binding Path=Size.Large}" >Large</ComboBoxItem>
             </ComboBox>
+            <TextBlock Height="20"></TextBlock>
+            <Button x:Name="AddItemButton" Width="200" Height="50" Click="AddItemButton_Click">Add Item</Button>
         </StackPanel>
-    </Grid>
+    </Grid>-->
 </UserControl>

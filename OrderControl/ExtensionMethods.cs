@@ -8,6 +8,12 @@ namespace PointOfSale.ExtensionMethods
 {
     public static class ExtensionMethods
     {
+        /// <summary>
+        /// finds the parent of a body in xaml code
+        /// </summary>
+        /// <typeparam name="T"> Type </typeparam>
+        /// <param name="element"></param>
+        /// <returns> The parent </returns>
         public static T FindAncestor<T>(this DependencyObject element) where T : DependencyObject
         {
             var parent = VisualTreeHelper.GetParent(element);
