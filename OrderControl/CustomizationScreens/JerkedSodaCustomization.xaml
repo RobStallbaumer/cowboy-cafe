@@ -1,15 +1,42 @@
 ﻿<UserControl x:Class="PointOfSale.CustomizationScreens.JerkedSodaCustomization"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale.CustomizationScreens"
+             xmlns:my="clr-namespace:CowboyCafe.Data;assembly=CowboyCafe.Data"    
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
+    <Control.Resources>
+        <ObjectDataProvider MethodName="GetValues" ObjectType="{x:Type sys:Enum}" 
+                            x:Key="DataSize">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="my:Size"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <ObjectDataProvider MethodName="GetValues" ObjectType="{x:Type sys:Enum}" 
+                            x:Key="Flavor">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="my:SodaFlavor"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Control.Resources>
     <Grid>
-        <StackPanel Orientation="Vertical">
-            <CheckBox IsChecked="{Binding Path=Ice}">Ice</CheckBox>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock>Choose Size of Drink</TextBlock>
+            <ListBox x:Name="mySizeBox" ItemsSource="{Binding Source={StaticResource DataSize}}" SelectedItem="{Binding Path=Size}"
+                     SelectionChanged="AddItemButton_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <TextBlock>Choose Flavor of Drink</TextBlock>
+            <ListBox x:Name="myFlavorBox" ItemsSource="{Binding Source={StaticResource Flavor}}" SelectedItem="{Binding Path=Flavor}"
+                     SelectionChanged="AddItemButton_Click"/>
         </StackPanel>
     </Grid>
 </UserControl>

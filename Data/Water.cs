@@ -53,17 +53,17 @@ namespace CowboyCafe.Data
         
         }
 
-        //private bool ice = true;
-        //public override bool Ice
-        //{
-        //    get { return ice; }
-        //    set
-        //    {
-        //        ice = value;
-        //        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
-        //        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
-        //    }
-        //}
+        private bool ice = true;
+        public override bool Ice
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         /// <summary>
         /// List of special instructions on the preperation of water

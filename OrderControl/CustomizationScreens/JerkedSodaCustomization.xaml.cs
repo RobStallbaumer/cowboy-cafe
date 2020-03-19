@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PointOfSale.ExtensionMethods;
 
 namespace PointOfSale.CustomizationScreens
 {
@@ -21,6 +22,14 @@ namespace PointOfSale.CustomizationScreens
         public JerkedSodaCustomization()
         {
             InitializeComponent();
+        }
+        private void AddItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<OrderControl>();
+            if (orderControl is OrderControl)
+            {
+                orderControl.SizeChanged();
+            }
         }
     }
 }

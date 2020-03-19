@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
-
+using PointOfSale.ExtensionMethods;
 namespace PointOfSale.CustomizationScreens
 {
     /// <summary>
@@ -25,13 +25,12 @@ namespace PointOfSale.CustomizationScreens
         }
         private void AddItemButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var orderControl = this.FindAncestor<OrderControl>();
+            if(orderControl is OrderControl)
+            {
+                orderControl.SizeChanged();
+            }
         }
 
-        private void mySizeBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var size = mySizeBox.SelectedItem;
-            
-        }
     }
 }
