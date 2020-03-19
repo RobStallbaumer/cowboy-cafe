@@ -19,20 +19,11 @@
     </Control.Resources>
     <Border>
         <StackPanel>
-            <TextBlock>Choose Size of Side</TextBlock>
-            <ListBox x:Name="mySizeBox" ItemsSource="{Binding Source={StaticResource DataSize}}" SelectedItem="{Binding Path=Size}"
+            <TextBlock FontSize="20">Choose Size of Baked Beans</TextBlock>
+            <ListBox x:Name="mySizeBox" FontSize="20" 
+                     ItemsSource="{Binding Source={StaticResource DataSize}}" 
+                     SelectedItem="{Binding Path=Size}"
                      SelectionChanged="AddItemButton_Click"/>
         </StackPanel>
     </Border>
-    <!--<Grid>
-        <StackPanel Orientation="Vertical">
-            <ComboBox ItemsSource="{Binding Path=Size}">
-                <ComboBoxItem IsSelected="{Binding Path=Size.Small}">Small</ComboBoxItem>
-                <ComboBoxItem IsSelected="{Binding Path=Size.Medium}">Medium</ComboBoxItem>
-                <ComboBoxItem IsSelected="{Binding Path=Size.Large}" >Large</ComboBoxItem>
-            </ComboBox>
-            <TextBlock Height="20"></TextBlock>
-            <Button x:Name="AddItemButton" Width="200" Height="50" Click="AddItemButton_Click">Add Item</Button>
-        </StackPanel>
-    </Grid>-->
 </UserControl>

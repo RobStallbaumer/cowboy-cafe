@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PointOfSale.ExtensionMethods;
 
 namespace PointOfSale.CustomizationScreens
 {
@@ -21,6 +22,19 @@ namespace PointOfSale.CustomizationScreens
         public CornDodgersCustomization()
         {
             InitializeComponent();
+        }
+        /// <summary>
+        /// Lets the order know that the item has changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AddItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<OrderControl>();
+            if (orderControl is OrderControl)
+            {
+                orderControl.SizeChanged();
+            }
         }
     }
 }

@@ -25,17 +25,21 @@
     </Control.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="175"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel>
-            <TextBlock>Choose Size of Drink</TextBlock>
-            <ListBox x:Name="mySizeBox" ItemsSource="{Binding Source={StaticResource DataSize}}" SelectedItem="{Binding Path=Size}"
+            <TextBlock FontSize="20">Choose Size of Soda</TextBlock>
+            <ListBox x:Name="mySizeBox" FontSize="20"
+                     ItemsSource="{Binding Source={StaticResource DataSize}}" 
+                     SelectedItem="{Binding Path=Size}"
                      SelectionChanged="AddItemButton_Click"/>
         </StackPanel>
         <StackPanel Grid.Row="1">
-            <TextBlock>Choose Flavor of Drink</TextBlock>
-            <ListBox x:Name="myFlavorBox" ItemsSource="{Binding Source={StaticResource Flavor}}" SelectedItem="{Binding Path=Flavor}"
+            <TextBlock FontSize="20">Choose Flavor of Soda</TextBlock>
+            <ListBox x:Name="myFlavorBox" FontSize="20"
+                     ItemsSource="{Binding Source={StaticResource Flavor}}" 
+                     SelectedItem="{Binding Path=Flavor}"
                      SelectionChanged="AddItemButton_Click"/>
         </StackPanel>
     </Grid>

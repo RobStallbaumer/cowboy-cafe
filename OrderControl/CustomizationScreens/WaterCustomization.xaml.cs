@@ -22,5 +22,18 @@ namespace PointOfSale.CustomizationScreens
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Lets the order know that the item has changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AddItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<OrderControl>();
+            if (orderControl is OrderControl)
+            {
+                orderControl.SizeChanged();
+            }
+        }
     }
 }
