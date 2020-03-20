@@ -35,7 +35,7 @@
                 Lemon
             </CheckBox>
         </StackPanel>
-  
+
         <StackPanel Grid.Row="1">
             <TextBlock FontSize="20">Choose Size of Water</TextBlock>
             <ListBox x:Name="mySizeBox" FontSize="20"

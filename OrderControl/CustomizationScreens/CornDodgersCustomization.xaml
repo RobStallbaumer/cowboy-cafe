@@ -19,7 +19,7 @@
     </Control.Resources>
     <Border>
         <StackPanel>
-            <TextBlock FontSize="20">Choose Size of Side</TextBlock>
+            <TextBlock FontSize="20">Choose Size of Corn Dodgers</TextBlock>
             <ListBox x:Name="mySizeBox" FontSize="20"
                      ItemsSource="{Binding Source={StaticResource DataSize}}" 
                      SelectedItem="{Binding Path=Size}"
