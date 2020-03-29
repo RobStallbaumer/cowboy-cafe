@@ -95,7 +95,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// If there is room for cream in the coffee
         /// </summary>
-        public bool roomForCream;
+        public bool roomForCream = false; 
         public bool RoomForCream
         {
             get { return roomForCream; }

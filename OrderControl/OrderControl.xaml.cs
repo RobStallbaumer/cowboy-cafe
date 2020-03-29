@@ -77,5 +77,13 @@ namespace PointOfSale
                 order.NotifyPropertyChanged();
             }
         }
+
+        public void RemoveItemFromOrder(IOrderItem item)
+        {
+            if (this.DataContext is Order order)
+            {
+                order.Remove(item);
+            }
+        }
     }
 }

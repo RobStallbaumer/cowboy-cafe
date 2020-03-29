@@ -81,7 +81,8 @@ namespace CowboyCafe.Data
         public void Remove(IOrderItem item) 
         {
             items.Remove(item);
-            if (item is INotifyPropertyChanged pcitem) pcitem.PropertyChanged -= OnItemChanged;                                      
+            if (item is INotifyPropertyChanged pcitem) pcitem.PropertyChanged -= OnItemChanged;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
         }
 
