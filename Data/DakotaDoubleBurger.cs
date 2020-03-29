@@ -20,7 +20,7 @@ namespace CowboyCafe.Data
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public bool bun = true;
+        private bool bun = true;
         /// <summary>
         /// if the burger has a bun
         /// </summary>

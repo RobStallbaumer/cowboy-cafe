@@ -84,7 +84,7 @@ namespace CowboyCafe.Data
             if (item is INotifyPropertyChanged pcitem) pcitem.PropertyChanged -= OnItemChanged;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
-        }
+        }   
 
         private void OnItemChanged(object sender, PropertyChangedEventArgs e)
         {
