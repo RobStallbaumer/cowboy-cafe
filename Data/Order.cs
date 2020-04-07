@@ -42,6 +42,17 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
+        /// the logic for the total with tax
+        /// </summary>
+        public double Total
+        {
+            get 
+            {
+                double total = Subtotal * 1.16;
+                return total;
+            }
+        }
+        /// <summary>
         /// items list that is used by this class then transformed into an IEnumerable<IOrderItem>
         /// </summary>
         private List<IOrderItem> items = new List<IOrderItem>();
@@ -70,9 +81,10 @@ namespace CowboyCafe.Data
         public void Add(IOrderItem item) 
         {
             items.Add(item);
-            if(item is INotifyPropertyChanged pcitem) pcitem.PropertyChanged += OnItemChanged;                                      
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+            if(item is INotifyPropertyChanged pcitem) pcitem.PropertyChanged += OnItemChanged;
+            NotifyPropertyChanged();
+
+
         }
         /// <summary>
         /// Removes an item from the list
@@ -82,9 +94,9 @@ namespace CowboyCafe.Data
         {
             items.Remove(item);
             if (item is INotifyPropertyChanged pcitem) pcitem.PropertyChanged -= OnItemChanged;
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
-        }   
+            NotifyPropertyChanged();
+
+        }
 
         private void OnItemChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -96,6 +108,7 @@ namespace CowboyCafe.Data
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Total"));
         }
     }
 }
