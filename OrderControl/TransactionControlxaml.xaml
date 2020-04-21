@@ -7,11 +7,138 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        
-        <Button Height="100" Width="200" Margin="100" HorizontalAlignment="Left"
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Grid.Column="0" Grid.Row="0" Width="200" Height="100"
                 Click="OnCashButtonClicked" FontSize="30">Cash</Button>
-        <Button Height="100" Width="200" Margin="100" FontSize="30" 
-                Click="OnCreditButtonClicked" HorizontalAlignment="Right" >Credit</Button>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" 
+                        Background="LightGreen" 
+                        BorderBrush="Green" 
+                        BorderThickness="3" 
+                        FontSize="30"
+                        Click="OneBillClicked"
+                        IsEnabled="False"> 1 
+                </Button>
+                <Button Grid.Column="1" 
+                        Background="LightGreen" 
+                        BorderBrush="Green" 
+                        BorderThickness="3" 
+                        FontSize="30"
+                        Click="FiveBillClicked"
+                        IsEnabled="False">5
+                </Button>
+                <Button Grid.Column="2" 
+                        Background="LightGreen" 
+                        BorderBrush="Green" 
+                        BorderThickness="3" 
+                        FontSize="30" 
+                        Click="TenBillClicked"
+                        IsEnabled="False">10
+                </Button>
+                <Button Grid.Column="3" 
+                        Background="LightGreen" 
+                        BorderBrush="Green" 
+                        BorderThickness="3" 
+                        FontSize="30" 
+                        Click="TwentyBillClicked"
+                        IsEnabled="False">20
+                </Button>
+                <Button Grid.Column="4" 
+                        Background="LightGreen" 
+                        BorderBrush="Green" 
+                        BorderThickness="3" 
+                        FontSize="30" 
+                        Click="FiftyBillClicked" 
+                        IsEnabled="False">50
+                </Button>
+                <Button Grid.Column="5" 
+                        Background="LightGreen" 
+                        BorderBrush="Green" 
+                        BorderThickness="3" 
+                        FontSize="30" 
+                        Click="HunderedBillClicked"
+                        IsEnabled="False">100
+                </Button>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" 
+                        Background="Goldenrod" 
+                        BorderBrush="Gold" 
+                        BorderThickness="3" 
+                        FontSize="30"
+                        Click="PennyClicked"
+                        IsEnabled="False">1
+                </Button>
+                <Button Grid.Column="1" 
+                        Background="Goldenrod" 
+                        BorderBrush="Gold" 
+                        BorderThickness="3" 
+                        FontSize="30"
+                        Click="NickleClicked"
+                        IsEnabled="False">5
+                </Button>
+                <Button Grid.Column="2" 
+                        Background="Goldenrod" 
+                        BorderBrush="Gold" 
+                        BorderThickness="3" 
+                        FontSize="30" 
+                        Click="DimeClicked"
+                        IsEnabled="False">10
+                </Button>
+                <Button Grid.Column="3" 
+                        Background="Goldenrod" 
+                        BorderBrush="Gold" 
+                        BorderThickness="3" 
+                        FontSize="30" 
+                        Click="QuarterClicked"
+                        IsEnabled="False">25
+                </Button>
+                <Button Grid.Column="4" 
+                        Background="Goldenrod" 
+                        BorderBrush="Gold" 
+                        BorderThickness="3" 
+                        FontSize="30" 
+                        Click="FiftyCentClicked" 
+                        IsEnabled="False">50
+                </Button>
+                <Button Grid.Column="5" 
+                        Background="Goldenrod" 
+                        BorderBrush="Gold" 
+                        BorderThickness="3" 
+                        FontSize="30" 
+                        Click="DollarClicked"
+                        IsEnabled="False">100
+                </Button>
+            </Grid>
+        </Grid>
+
+        <Button Grid.Column="1" Width="200" FontSize="30" 
+                Click="OnCreditButtonClicked" Margin="100,25,100,325">Credit</Button>
 
     </Grid>
 </UserControl>

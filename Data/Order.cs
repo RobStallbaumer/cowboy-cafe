@@ -15,6 +15,10 @@ namespace CowboyCafe.Data
 {
     public class Order : INotifyPropertyChanged
     {
+        public Order(uint LON)
+        {
+            lastOrderNumber = LON;
+        }
         /// <summary>
         /// Lets the Order Summary Control know somthing happend and it needs to update
         /// </summary>

@@ -17,9 +17,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		..\..\..\Downloads\UML for milestone 3 (1).png = ..\..\..\Downloads\UML for milestone 3 (1).png
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointOfSale", "OrderControl\PointOfSale.csproj", "{89B427E1-70C7-451C-95A4-473C162D0653}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PointOfSale", "OrderControl\PointOfSale.csproj", "{89B427E1-70C7-451C-95A4-473C162D0653}"
 	ProjectSection(ProjectDependencies) = postProject
 		{C3BFDB18-4ACD-495B-9CCE-675B7A8FD8FE} = {C3BFDB18-4ACD-495B-9CCE-675B7A8FD8FE}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "Website\Website.csproj", "{C330B17C-756F-44F7-897B-633929A62E4D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C3BFDB18-4ACD-495B-9CCE-675B7A8FD8FE} = {C3BFDB18-4ACD-495B-9CCE-675B7A8FD8FE}
+		{157E0096-37C4-4A66-80B0-337D690719F2} = {157E0096-37C4-4A66-80B0-337D690719F2}
+		{89B427E1-70C7-451C-95A4-473C162D0653} = {89B427E1-70C7-451C-95A4-473C162D0653}
 	EndProjectSection
 EndProject
 Global
@@ -40,6 +47,10 @@ Global
 		{89B427E1-70C7-451C-95A4-473C162D0653}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89B427E1-70C7-451C-95A4-473C162D0653}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89B427E1-70C7-451C-95A4-473C162D0653}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C330B17C-756F-44F7-897B-633929A62E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C330B17C-756F-44F7-897B-633929A62E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C330B17C-756F-44F7-897B-633929A62E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C330B17C-756F-44F7-897B-633929A62E4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

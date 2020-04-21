@@ -18,7 +18,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using CashRegister;
 namespace PointOfSale
 {
     /// <summary>
@@ -26,14 +26,17 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderControl : UserControl
     {
+        public CashDrawer cashDrawer;
+        public Order order = null;
         /// <summary>
         /// Constuctor initilizes component and creates the datacontext for the ordercontrol
         /// </summary>
         public OrderControl()
         {
             InitializeComponent();
-            var order = new Order();
+            order = new Order(0);
             this.DataContext = order;
+            cashDrawer = new CashDrawer();
         }
 
         /// <summary>
@@ -53,7 +56,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void CancelOrderButton_Click(object sender, RoutedEventArgs e)
         {
-            this.DataContext = new Order();
+            this.DataContext = new Order(order.OrderNumber);
         }
 
         /// <summary>
@@ -76,6 +79,12 @@ namespace PointOfSale
             {
                 order.NotifyPropertyChanged();
             }
+        }
+
+        public void NewOrder()
+        {
+            this.DataContext = new Order(order.OrderNumber);
+            Container.Child = new MenuItemSelectionControl();
         }
 
         public void RemoveItemFromOrder(IOrderItem item)
