@@ -4,9 +4,9 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class Menu
+    public static class Menu
     {
-        static IEnumerable<IOrderItem> Entrees()
+        public static IEnumerable<IOrderItem> Entrees()
         {
             List<IOrderItem> list = new List<IOrderItem>();
             list.Add(new AngryChicken());
@@ -20,7 +20,7 @@ namespace CowboyCafe.Data
             return entree;
         }
 
-        static IEnumerable<IOrderItem> Sides()
+        public static IEnumerable<IOrderItem> Sides()
         {
             List<IOrderItem> list = new List<IOrderItem>();
             list.Add(new BakedBeans());
@@ -31,7 +31,7 @@ namespace CowboyCafe.Data
             return side;
         }
 
-        static IEnumerable<IOrderItem> Drinks()
+        public static IEnumerable<IOrderItem> Drinks()
         {
             List<IOrderItem> list = new List<IOrderItem>();
             list.Add(new CowboyCoffee());
@@ -42,7 +42,7 @@ namespace CowboyCafe.Data
             return drink;
         }
 
-        static IEnumerable<IOrderItem> CompleteMenu()
+        public static IEnumerable<IOrderItem> CompleteMenu()
         {
             List<IOrderItem> list = new List<IOrderItem>();
             list.Add(new AngryChicken());
