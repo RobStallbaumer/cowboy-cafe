@@ -35,10 +35,10 @@
             <input name="CalMax" type="text" @*min="0" max="1000" step=".01"*@ placeholder="max" />
         </div>
 
-        <ul class="menu-list">
+        <ul class="flex-column">
             @foreach (IOrderItem item in Model.MenuItems)
             {
-                <li>
+                <li class="flex-column">
                     <div class="name">
                         <h3 class="title">@item.ToString()</h3>
                     </div>
@@ -46,7 +46,7 @@
                         <div class="price">@item.Price</div>
                         <div class="calories">@item.Calories</div>
                     </div>
-                </li>
+                </li class="flex-column">
             }
         </ul>
     </form>

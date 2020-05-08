@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using CowboyCafe.Data;
+using Microsoft.AspNetCore.Razor.Language;
+
 namespace Website.Pages
 {
     public class IndexModel : PageModel
@@ -88,9 +90,49 @@ namespace Website.Pages
                 CalMax = null;
             }
             MenuItems = MenuDatabase.All;
-            MenuItems = MenuDatabase.Search(SearchTerms);
-            MenuItems = MenuDatabase.FilterByPrice(MenuItems, PriceMin, PriceMax);
-            MenuItems = MenuDatabase.FilterByCalories(MenuItems, CalMin, CalMax);
+            //MenuItems = MenuDatabase.Search(SearchTerms);
+            //MenuItems = MenuDatabase.FilterByPrice(MenuItems, PriceMin, PriceMax);
+            //MenuItems = MenuDatabase.FilterByCalories(MenuItems, CalMin, CalMax);
+
+            if (SearchTerms != null)
+            {
+                MenuItems = MenuItems.Where(item =>
+                item.ToString() != null && item.ToString().Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase));
+            }
+            if (PriceMax != null && PriceMin == null)
+            {
+                MenuItems = MenuItems.Where(item =>
+                item.Price < PriceMax);
+            }
+            else if(PriceMax == null && PriceMin != null)
+            {
+                MenuItems = MenuItems.Where(item =>
+                item.Price > PriceMin);
+            }
+            else if(PriceMax != null && PriceMin != null)
+            {
+                MenuItems = MenuItems.Where(item =>
+                item.Price < PriceMax &&  item.Price > PriceMin);
+            }
+            if (CalMax != null && CalMin == null)
+            {
+                MenuItems = MenuItems.Where(item =>
+                item.Calories < CalMax);
+            }
+            else if (CalMax == null && CalMin != null)
+            {
+                MenuItems = MenuItems.Where(item =>
+                item.Calories > CalMin);
+            }
+            else if(CalMax != null && CalMin != null)
+            {
+                MenuItems = MenuItems.Where(item =>
+                item.Calories < CalMax && item.Price > CalMin);
+            }
+            else
+            {
+                MenuItems = MenuDatabase.All;
+            }
         }
     }
 }

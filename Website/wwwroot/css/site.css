@@ -93,3 +93,17 @@ name{
 .price::before{
     content:"$";
 }
+.flex-columns{
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 490px){
+    .float-columns > div {
+        float: none;
+        width: 100%;
+    }
+    .flex-columns{
+        flex-direction: column;
+    }
+}
